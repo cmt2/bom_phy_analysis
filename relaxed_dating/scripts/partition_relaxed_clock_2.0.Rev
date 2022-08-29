@@ -1,0 +1,247 @@
+#
+# Script to estimate relaxed clock tree 
+# using a partitioned GTR+gamma substition model.
+# 
+
+#######################
+# Reading in the Data #
+#######################
+analysis = "relaxed_clock_partition_45_2.0"
+# read in the alignments
+filenames = v("data/good_L146_c1.fasta",   "data/good_L146_c2.fasta",   "data/good_L146_c3.fasta",   "data/good_L183_c1.fasta",  
+              "data/good_L183_c2.fasta",   "data/good_L183_c3.fasta",   "data/good_L267_a_c1.fasta", "data/good_L267_a_c2.fasta",
+              "data/good_L267_a_c3.fasta", "data/good_L297_c1.fasta",   "data/good_L297_c2.fasta",   "data/good_L297_c3.fasta",  
+              "data/good_L334_c1.fasta",   "data/good_L334_c2.fasta",   "data/good_L334_c3.fasta",   "data/good_L35_a_c1.fasta", 
+              "data/good_L35_a_c2.fasta",  "data/good_L35_a_c3.fasta",  "data/good_L39_c1.fasta",    "data/good_L39_c2.fasta",   
+              "data/good_L39_c3.fasta",    "data/good_L397_c1.fasta",   "data/good_L397_c2.fasta",   "data/good_L397_c3.fasta",  
+              "data/good_L400_c1.fasta",   "data/good_L400_c2.fasta",   "data/good_L400_c3.fasta",   "data/good_L408_c1.fasta",  
+              "data/good_L408_c2.fasta",   "data/good_L408_c3.fasta",   "data/good_L410_c1.fasta",   "data/good_L410_c2.fasta",  
+              "data/good_L410_c3.fasta",   "data/good_L412_c1.fasta",   "data/good_L412_c2.fasta",   "data/good_L412_c3.fasta",  
+              "data/good_L429_c1.fasta",   "data/good_L429_c2.fasta",   "data/good_L429_c3.fasta",   "data/good_L59_a_c1.fasta", 
+              "data/good_L59_a_c2.fasta",  "data/good_L59_a_c3.fasta",  "data/good_L85_b_c1.fasta",  "data/good_L85_b_c2.fasta", 
+              "data/good_L85_b_c3.fasta")
+
+# Get the tree
+observed_phylogeny = readTrees("data/rev_starting.tre")[1]
+
+
+taxa = observed_phylogeny.taxa()
+
+for (i in 1:taxa.size()) {
+  taxa_names[i] = taxa[i].getSpeciesName()
+}
+
+n_data_subsets = filenames.size()
+for (i in 1:n_data_subsets) {
+     data[i] = readDiscreteCharacterData(filenames[i])
+     data[i].addMissingTaxa(taxa)
+     data[i].excludeTaxa( data[i].taxa() ) # exclude all taxa
+     data[i].includeTaxa(taxa_names) 
+}
+
+#some useful data
+n_tips <- taxa.size()
+n_branches <- 2 * n_tips - 2
+mi = 0
+
+#set up moves and monitors vectors
+
+moves    = VectorMoves()
+monitors = VectorMonitors()
+
+##################################
+#      Substitution Model        #
+#   Loop over each data subset   #
+##################################
+  
+for (i in 1:n_data_subsets) {
+    # exchangeability rates for partition i
+    er_prior[i] <- v(1,1,1,1,1,1)
+    er[i] ~ dnDirichlet(er_prior[i])
+    moves.append( mvSimplexElementScale(er[i], weight=0.25) )
+
+    # stationary frequencies for partition i
+    pi_prior[i] <- v(1,1,1,1)
+    pi[i] ~ dnDirichlet(pi_prior[i])
+    moves.append( mvSimplexElementScale(pi[i], weight=0.25) )
+
+    # rate matrix for partition i
+    Q[i] := fnGTR(er[i],pi[i]) 
+  
+    # +Gamma for partition i
+    alpha_prior <- 0.05
+    alpha[i] ~ dnExponential( alpha_prior )
+    gamma_rates[i] := fnDiscretizeGamma( alpha[i], alpha[i], 4, false )
+
+    # add moves for the alpha parameter
+    moves.append( mvScale(alpha[i],weight=0.25) )
+
+    # the probability of a site being invariable
+    pinvar[i] ~ dnBeta(1,1)
+    moves.append( mvBetaProbability(pinvar[i], delta=10, tune=true, weight=0.25) )
+}
+
+##############################
+# Partition rate multipliers #
+##############################
+
+# specify a rate multiplier for each partition
+part_rate_mult ~ dnDirichlet( rep(1.0, n_data_subsets) )
+moves.append( mvBetaSimplex(part_rate_mult, alpha=1.0, tune=true, weight=n_data_subsets) )
+moves.append( mvDirichletSimplex(part_rate_mult, alpha=1.0, tune=true, weight=2.0) )
+
+# note that we use here a vector multiplication, 
+# i.e., multiplying each element of part_rate_mult by n_data_subsets
+part_rate := part_rate_mult * n_data_subsets
+
+##############
+# Tree model #
+##############
+
+NUM_LINEAGES <- n_tips
+# the BDP is conditioned on the root time
+# pull from Chacon et al 
+root_time ~ dnUniform(23.2, 150)
+root_time.setValue(observed_phylogeny.rootAge())
+moves.append( mvScale(root_time, weight=10) )# the birth rate is a stochastic random variable drawn from a lognormal prior
+# MCMC samples this variable using a scale proposal
+speciation_mean <- ln( abs(ln(abs(NUM_LINEAGES)/2.0)) / 15.6 )
+speciation_sd <- 0.587405
+speciation ~ dnLognormal(mean=speciation_mean, sd=speciation_sd) 
+moves.append( mvScale(speciation, lambda=1.0, tune=true, weight=3.0) )
+extinction_mean <- ln( abs(ln(abs(NUM_LINEAGES)/2.0)) / 15.6 )
+extinction_sd <- 0.587405
+extinction ~ dnLognormal(mean=extinction_mean, sd=extinction_sd) 
+moves.append( mvScale(extinction, lambda=1.0, tune=true, weight=3.0) )
+diversification := speciation - extinction
+# rho is the probability of sampling species at the present
+rho := Probability(n_tips/NUM_LINEAGES)
+# the time tree is a stochastic node modeled by the constant rate birth-death process (dnBDP)
+phylogeny ~ dnBDP(lambda=speciation, mu=extinction, rho=rho, rootAge=abs(root_time), taxa=taxa)
+phylogeny.setValue( observed_phylogeny )
+# moves[++mi] = mvNarrow(phylogeny, weight=15.0)
+#moves.append( mvNNI(phylogeny, weight=25.0) )
+#moves.append( mvFNPR(phylogeny, weight=25.0) )
+#moves.append( mvGPR(phylogeny, weight=25.0) )
+moves.append( mvSubtreeScale(phylogeny, weight=15.0) )
+moves.append( mvNodeTimeSlideUniform(phylogeny, weight=25.0) )
+# moves.append( mvNodeTimeScale(phylogeny, weight=20.0) )
+moves.append( mvNodeTimeSlideBeta(phylogeny, weight=30.0) )
+
+#######################
+# Fossil calibrations #
+#######################
+source("scripts/clades.Rev")
+
+### Luzuriaga fossil
+
+# create a deterministic node for the stem age of the MRCA of Luzuriaga
+# # fossils from Isles et. al 2015: Luzuriaga stem node 23.2 
+tmrca_Luzuriaga := tmrca(phylogeny, clade_Luzuriaga, stemAge=FALSE)
+# create an additional deterministic node that is negative, representing time in the past
+negative_tmrca_Luzuriaga := -(tmrca_Luzuriaga)
+# the age of the fossil is a stochastic node that has a lognormal waiting time that is a function of the age of the calibration node
+# we will model this waiting time so that the fossil is mean 10 My younger than its ancestor, but could be ~ 0-30 My
+mean_ln_rip = 10
+sdv = 2.0
+mu = ln(mean_ln_rip) - ((sdv * sdv) * 0.5)
+# using these parameters we create a stochastic node for the fossil
+stem_Luzuriaga_fossil ~ dnLnorm(mu, sdv, offset=negative_tmrca_Luzuriaga)
+# then we clamp this node with the observed fossil specimen, treating the fossil like data
+luzurg_fossil_age = -23.2
+stem_Luzuriaga_fossil.clamp(luzurg_fossil_age)
+
+### Bomarea crown age 
+
+# create a deterministic node for the crown age of the MRCA of Bomarea
+# # secondary calibration from Chacon et. al 2012: 14.3 [7.1-23.1]
+tmrca_Bomarea := tmrca(phylogeny, clade_Bomarea, stemAge=FALSE)
+f_Bomarea ~ dnSoftBoundUniformNormal(tmrca_Bomarea - 7.1, 23.1 - tmrca_Bomarea, 3.0, 0.55)
+f_Bomarea.clamp(0.0)
+
+### Alstroemeria crown age 
+
+# create a deterministic node for the crown age of the MRCA of Alstroemeria
+# # secondary calibration from Chacon et. al 2012: 18.4 [11.2-26.8]
+tmrca_Alstroemeria := tmrca(phylogeny, clade_Alstroemeria, stemAge=FALSE)
+f_Alstroemeria ~ dnSoftBoundUniformNormal(tmrca_Alstroemeria - 11.2, 26.8 - tmrca_Alstroemeria, 3.5, 0.5)
+f_Alstroemeria.clamp(0.0)
+
+### Alstroemerioideae crown age 
+
+# create a deterministic node for the crown age of the MRCA of Alstroemerioideae
+# # secondary calibration from Chacon et. al 2012: 29 [18.2-42.6]
+tmrca_Alstroemerioideae := tmrca(phylogeny, clade_Alstroemerioideae, stemAge=FALSE)
+f_Alstroemerioideae ~ dnSoftBoundUniformNormal(tmrca_Alstroemerioideae - 18.2, 42.6 - tmrca_Alstroemerioideae, 5, 0.55)
+f_Alstroemerioideae.clamp(0.0)
+
+###################
+# Molecular clock #
+###################
+clock_mean ~ dnLoguniform(1e-6,1)
+clock_mean.setValue(0.05)
+moves.append( mvScale(clock_mean, weight=5.0) )
+clock_sd ~ dnExponential(abs(1 / 0.587405))
+moves.append( mvScale(clock_sd, weight=5.0) )
+# use a discretized lognormal
+for(i in 1:n_branches) {
+    
+    # draw the branch rate from a lognormal
+    branch_rates[i] ~ dnLognormal( ln(clock_mean) - clock_sd * clock_sd * 0.5, clock_sd)
+    moves.append( mvScale(branch_rates[i], weight=1.0) )
+    
+}
+mean_rt := mean(branch_rates)
+# some joint moves
+speciation.setValue(0.5)
+extinction.setValue(0.15)
+up_down_scale_div = mvUpDownScale(lambda=1.0, weight=20)
+up_down_scale_div.addVariable( speciation, TRUE )
+up_down_scale_div.addVariable( extinction, TRUE )
+moves.append( up_down_scale_div )
+up_down_rate_scale = mvUpDownScale(lambda=1.0, weight=10)
+up_down_rate_scale.addVariable( clock_mean,   TRUE )
+up_down_rate_scale.addVariable( branch_rates, TRUE )
+moves.append( up_down_rate_scale )
+up_down_scale_tree = mvUpDownScale(lambda=1.0, weight=20)
+up_down_scale_tree.addVariable( phylogeny,    TRUE )
+up_down_scale_tree.addVariable( clock_mean,   FALSE )
+up_down_scale_tree.addVariable( branch_rates, FALSE )
+moves.append( up_down_scale_tree )
+rate_age_proposal = mvRateAgeProposal(phylogeny, weigh=20)
+rate_age_proposal.addRates( branch_rates )
+moves.append( rate_age_proposal )
+
+
+
+###################
+###################
+# PhyloCTMC Model #
+###################
+
+for (i in 1:n_data_subsets) {
+    phyloSeq[i] ~ dnPhyloCTMC(tree=phylogeny, Q=Q[i], branchRates=part_rate[i] * branch_rates, siteRates=gamma_rates[i], pInv=pinvar[i], type="DNA")
+    phyloSeq[i].clamp(data[i])
+}
+
+#############
+# THE Model #
+#############
+mymodel = model(Q)
+monitors.append( mnModel(filename="output/" + analysis + ".log",printgen=10, separator = TAB) )
+monitors.append( mnFile(filename="output/" + analysis + ".trees",printgen=10, separator = TAB, phylogeny) )
+monitors.append( mnScreen(printgen=10, root_time) )
+mymcmc = mcmc(mymodel, monitors, moves)
+mymcmc.burnin(generations=1000,tuningInterval=50)
+mymcmc.operatorSummary()
+#mymcmc.run(generations=300000)
+mymcmc.run(generations=100000)
+# Now, we will analyze the tree output.
+# Let us start by reading in the tree trace
+analysis = "relaxed_clock_partition_45_2.0"
+treetrace = readTreeTrace("output/" + analysis + ".trees", treetype="clock", burnin=0)
+# and get the summary of the tree trace
+#treetrace.summarize()
+map_tree = mapTree(treetrace,"output/" + analysis + "_map.tree")
+# you may want to quit RevBayes now
+q()

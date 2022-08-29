@@ -1,0 +1,14 @@
+**/.DS_Store
+genesortR_bom/alns_all/*
+genesortR_bom/rooted_gt/*
+relaxed_dating/data/*
+dec_bom_only/output/*
+dec_alstr/output/*
+lsbdp/output/*
+relaxed_dating/output/*
+genesortR_bom/genes_selected_15/*
+dec_bom_only/data_prep/relaxed_clock_partition_45_2.0_combined.trees
+dec_alstr/data_prep/relaxed_clock_partition_45_2.0_combined.trees
+dec_alstr/data_prep/relaxed_clock_partition_45_2.0_subsampled.trees
+
+

@@ -1,0 +1,1161 @@
+IQ-TREE multicore version 1.6.12 for Mac OS X 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    Carries-MacBook-Air.local (AVX2, FMA3, 16 GB RAM)
+Command: iqtree -b 1000 -nt 4 -spp partitions.nex -s concat_strict.fasta
+Seed:    609363 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Jun  7 15:12:50 2021
+Kernel:  AVX+FMA - 4 threads (8 CPU cores detected)
+
+Reading partition model file partitions.nex ...
+Reading alignment file concat_strict.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 1 sites contain only gaps or ambiguous characters.
+Alignment has 121 sequences with 43218 columns, 15386 distinct patterns
+7227 parsimony-informative, 2197 singleton sites, 33794 constant sites
+                                                     Gap/Ambiguity  Composition  p-value
+   1  Bomarea_edulis_Veracruz_Tribble65                     13.92%    passed     71.47%
+   2  Bomarea_secundifolia_Peru_Macbride4962                 9.54%    failed      0.12%
+   3  Bomarea_patinii_Colombia_Tribble3                     12.87%    passed     44.33%
+   4  Bomarea_tribachiata_AlzateS_N_                        55.14%    failed      0.01%
+   5  Bomarea_glaucescens_Ecuador_Caranqui1583              37.98%    failed      3.22%
+   6  Bomarea_edulis_Bolivia_Solomon7616                    24.62%    passed     71.14%
+   7  Bomarea_involucrosa_Peru_Galiano6988                   4.49%    passed     37.96%
+   8  Bomarea_multiflora_CultivatedinCAfromCol_Greenhouse   58.46%    failed      0.00%
+   9  Bomarea_sp__enanorojo_Peru_Graham12607                15.22%    failed      4.16%
+  10  Bomarea_edulis_MorelosS_Tribble377                     4.35%    passed     65.01%
+  11  Bomarea_brevis_Bolivia_Teran1759                      12.41%    passed     24.29%
+  12  Bomarea_acuminata_CR_Bonifacino6051                   11.38%    passed     47.23%
+  13  Alstroemeria_presliana_KEW                            26.30%    failed      4.79%
+  14  Bomarea_patacocensis_Ecuador_Luteyn14078              35.35%    failed      0.00%
+  15  Bomarea_edulis_Argentina_Deginani1587                  9.65%    passed     77.13%
+  16  Bomarea_tarmensis_Bolivia_Fernandez3467                7.37%    passed     32.01%
+  17  Bomarea_lutea_Ecuador_vanderWerff12169                77.32%    passed     49.24%
+  18  Bomarea_ampayesana_Peru_Bocke3215                      6.61%    passed     52.04%
+  19  Bomarea_aurantiaca_Bolivia_Fuentes13880               10.90%    passed     20.45%
+  20  Bomarea_parvifolia_Peru_Stein2019                     42.88%    passed     23.46%
+  21  Bomarea_edulis_Guatemala_Breckon2075                  19.80%    failed      0.03%
+  22  Drymophila_moorei_Australia_Copeland4560              13.61%    failed      0.05%
+  23  Bomarea_trimorphophylla_Alzate3158                    10.04%    passed     79.13%
+  24  Bomarea_distichifolia_CultivatedinCA_SFBG20120053     50.69%    failed      0.00%
+  25  Luzuriaga_marginata_Bonifacino550                      8.88%    failed      1.50%
+  26  Bomarea_edulis_Queretaro_Tribble701                   19.63%    passed     99.41%
+  27  Bomarea_foliosa_Ecuador_Zak2268                        7.49%    passed     30.93%
+  28  Bomarea_edulis_Brazil_Campbell8900                     8.39%    passed     80.50%
+  29  Bomarea_diffracta_Colombia_Tribble12                   2.98%    passed     69.96%
+  30  Bomarea_hirsuta_CR_Bonifacino6052                      7.90%    passed     44.92%
+  31  Bomarea_torta_Alzate3270                               3.46%    passed     42.82%
+  32  Bomarea_caudata_Peru_Weberbauer7559                   66.02%    passed     44.93%
+  33  Bomarea_porrecta_Peru_AlayoB_020                       3.51%    passed     78.83%
+  34  Bomarea_lehmannii_AlzateS_N_                          27.08%    failed      0.17%
+  35  Bomarea_sp__catanatasoya_Peru_Graham12611             10.94%    passed     98.79%
+  36  Alstroemeria_pulchra_Kelch00_014                      23.62%    passed      9.84%
+  37  Bomarea_amilcariana_Venezuela_Dorr8337                10.07%    failed      0.35%
+  38  Bomarea_edulis_Cuba_Smith3264                         40.03%    passed     70.12%
+  39  Bomarea_chimborazensis_Ecuador_Aedo13023               6.65%    passed     99.75%
+  40  Alstroemeria_aurea_Andrews94004                       15.26%    passed     69.25%
+  41  Bomarea_vestita_AlzateS_N_                             6.38%    passed     57.25%
+  42  Bomarea_edulis_Argentina_Hunziker12327                67.02%    failed      0.23%
+  43  Bomarea_macrocephala_Bolivia_Vargas7052               10.21%    passed     44.38%
+  44  Bomarea_albimontana_Peru_LeivaS_N_                    41.04%    passed     74.18%
+  45  Bomarea_pumila_Bolivia_Fuentes13830                   37.34%    passed     50.31%
+  46  Bomarea_salsilla_Chile_Ackerman545                     5.40%    passed     47.68%
+  47  Bomarea_alstroemeriodes_Peru_Dillon1747               12.29%    passed     34.07%
+  48  Bomarea_densiflora_Alzate3151                         15.22%    passed     60.87%
+  49  Bomarea_sp__enanoverde_Peru_Graham12600               14.17%    passed     27.48%
+  50  Bomarea_angulata_Peru_Quiroz3208                      68.68%    failed      0.81%
+  51  Bomarea_sp__enanorojo_Peru_Graham12599                11.46%    passed      8.26%
+  52  Bomarea_setacea_Colombia_Tribble7                     15.45%    failed      4.32%
+  53  Bomarea_suberecta_CR_Bonifacino6053                    4.56%    passed     39.85%
+  54  Alstroemeria_pallida_KEW                              20.30%    passed     40.75%
+  55  Bomarea_edulis_Nayarit_Tribble113                      4.48%    passed     49.12%
+  56  Bomarea_multiflora_AlzateS_N_                         16.24%    passed     49.70%
+  57  Luzuriaga_polyphylla_CultivatedinCA_UCBG90_2401        6.56%    failed      2.34%
+  58  Bomarea_edulis_Oaxaca_Tribble76                        4.71%    passed     86.41%
+  59  Bomarea_acutifolia_Mexico_Tribble79                    5.64%    passed     52.23%
+  60  Bomarea_brachysepala_Ecuador_Jorgensen2129            10.74%    passed     87.76%
+  61  Bomarea_distichophylla_Peru_Rojas2689                 28.87%    passed     56.66%
+  62  Bomarea_hartwegii_Alzate3157                          60.20%    passed     80.00%
+  63  Bomarea_edulis_Veracruz_Tribble552                     7.89%    passed     81.50%
+  64  Bomarea_pauciflora_AlzateS_N_                         11.26%    passed     62.57%
+  65  Bomarea_chiriquina_Panama_Hammel6374                  21.30%    passed     71.74%
+  66  Bomarea_multipes_Alzate3153                            3.68%    passed     40.14%
+  67  Bomarea_superba_CultivatedinCA_SFBG20120052_A          3.76%    passed     62.34%
+  68  Bomarea_libertadensis_Peru_Alayo020                   25.23%    passed     62.84%
+  69  Bomarea_linifolia_Colombia_Tribble8                    9.45%    passed     40.31%
+  70  Bomarea_edulis_Brazil_CaxiasdoSul_Kegler89             8.94%    passed     97.45%
+  71  Bomarea_edulis_Chiapas_Tribble90                       4.80%    passed     21.69%
+  72  Drymophila_cyanocarpa_Australia_Messina989             6.66%    failed      0.06%
+  73  Bomarea_sp__oso_Peru_Graham12613                       8.89%    passed     15.45%
+  74  Bomarea_sp__ponillalsoya_Peru_Graham12616              2.88%    passed     64.33%
+  75  Bomarea_euryphylla_Ecuador_Vargas2930                 26.57%    failed      3.20%
+  76  Bomarea_sp__enanoverde_Peru_Graham12609                8.13%    passed     62.44%
+  77  Bomarea_straminea_Alzate3300                           4.49%    passed     45.14%
+  78  Bomarea_obovata_CR_Bonifacino6050                     14.98%    passed     60.36%
+  79  Luzuriaga_radicans_Layton84                            7.46%    failed      2.71%
+  80  Bomarea_edulis_Haiti_Proctor10821                      3.99%    passed     51.66%
+  81  Bomarea_ovallei_KEW                                   25.12%    passed     24.41%
+  82  Alstroemeria_ligtu_Ornduff9112                        56.06%    failed      0.03%
+  83  Bomarea_chaparensis_Bolivia_Steinbach8897             29.80%    failed      0.12%
+  84  Bomarea_edulis_Suriname_Lindeman455                   34.27%    passed     50.62%
+  85  Bomarea_dolichocarpa_Peru_Barbour5069                 48.13%    passed     57.56%
+  86  Bomarea_puracensis_GarciaBarriga13025                 66.94%    failed      0.39%
+  87  Bomarea_bredemeyerana_Venezuela_Liesner7935           70.86%    passed     27.67%
+  88  Bomarea_cornuta_Bolivia_Fuentes17664                  71.47%    passed     31.04%
+  89  Bomarea_edulis_MorelosN_Tribble325                    46.93%    failed      0.00%
+  90  Bomarea_edulis_CR_J_F_Morales6635                     76.30%    failed      0.00%
+  91  Alstroemeria_revoluta_Watson6608                      63.77%    failed      0.00%
+  92  Bomarea_campylophylla_Bolivia_Maldonado3174           68.98%    failed      0.94%
+  93  Bomarea_hieronymi_Ecuador_Aluarez2557                 54.45%    passed     50.74%
+  94  Bomarea_bredemeyerana_Colombia_Tribble06              50.70%    failed      0.00%
+  95  Bomarea_edulis_Nicaragua_Stevens21839                 78.57%    passed     34.69%
+  96  Bomarea_edulis_Brazil_Bahia_Thomas13631               21.83%    passed     92.70%
+  97  Bomarea_andimarcana_Peru_Suclli1307                   52.40%    failed      0.32%
+  98  Bomarea_edulis_Brazil_MatoGrosso_Eiten9877            56.55%    passed     60.54%
+  99  Bomarea_edulis_Venezuela_AymardC_1314                 58.81%    failed      2.39%
+ 100  Bomarea_peruviana_Peru_Stein2033B                     70.73%    passed     15.24%
+ 101  Bomarea_killipii_Peru_Vasquez33143                    74.89%    failed      0.00%
+ 102  Bomarea_coccinea_Peru_Nunez13229                      81.46%    failed      0.00%
+ 103  Bomarea_ovata_Peru_Farfan526                          77.47%    failed      3.82%
+ 104  Bomarea_edulis_Argentina_M_ulguradeRomero1876         74.68%    passed     75.22%
+ 105  Bomarea_weigendii_Peru_Davis1224                      59.80%    passed     61.22%
+ 106  Bomarea_cf_anceps_Peru_LopezM_8913                    82.26%    passed      9.03%
+ 107  Bomarea_edulis_DR_Jimenez3903                         54.78%    passed     48.55%
+ 108  Bomarea_edulis_Honduras_Harmon3784                    50.69%    failed      0.00%
+ 109  Bomarea_nervosa_Alzate3154                            53.56%    failed      0.00%
+ 110  Bomarea_edulis_Panama_Duke13712                       75.23%    failed      0.00%
+ 111  Alstroemeria_crispata_Wegenknecht18128                64.04%    failed      0.84%
+ 112  Bomarea_dispar_Peru_SchunkeV_3544                     72.71%    failed      0.00%
+ 113  Bomarea_obovata_Ecuador_Clark4985                     82.49%    failed      0.02%
+ 114  Bomarea_trichophylla_Venezuela_Rivero1217             46.01%    passed     23.85%
+ 115  Bomarea_edulis_Argentina_Novara2378                   77.64%    failed      0.63%
+ 116  Alstroemeria_isabellana_Hatschbach43366               71.58%    failed      0.00%
+ 117  Alstroemeria_apertiflora_Hatschbach17552              60.55%    passed     13.12%
+ 118  Bomarea_herbertiana_Colombia_Pennell3224              83.47%    failed      0.00%
+ 119  Bomarea_edulis_Venezuela_Bunting4817                  74.31%    passed     61.28%
+ 120  Bomarea_speciosa_Bolivia_Cornejo800                   80.52%    failed      0.00%
+ 121  Bomarea_angustipetala_Alzate5116                      83.48%    failed      0.00%
+WARNING: 42 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                 33.59%  44 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Loading 128 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	DNA	121	717	92	581	GTR+I+G	Subset1
+2	DNA	119	876	98	721	GTR+G	Subset2
+3	DNA	120	892	304	515	GTR+G	Subset3
+4	DNA	121	335	30	298	GTR+G	Subset4
+5	DNA	121	711	52	638	GTR+I+G	Subset5
+6	DNA	100	193	71	101	GTR	Subset6
+7	DNA	121	628	69	523	GTR+G	Subset7
+8	DNA	106	167	7	159	GTR+I+G	Subset8
+9	DNA	114	270	10	257	GTR	Subset9
+10	DNA	121	636	14	616	GTR	Subset10
+11	DNA	117	506	161	310	GTR+I+G	Subset11
+12	DNA	121	654	71	555	GTR+G	Subset12
+13	DNA	115	422	12	403	GTR	Subset13
+14	DNA	119	791	275	452	GTR+G	Subset14
+15	DNA	121	663	46	603	GTR+I+G	Subset15
+16	DNA	117	547	11	534	GTR	Subset16
+17	DNA	114	344	132	192	GTR+G	Subset17
+18	DNA	121	976	44	902	GTR	Subset18
+19	DNA	101	352	30	310	GTR+I+G	Subset19
+20	DNA	121	726	219	452	GTR+G	Subset20
+21	DNA	121	535	54	455	GTR+G	Subset21
+22	DNA	117	414	138	239	GTR+G	Subset22
+23	DNA	116	670	43	589	GTR+G	Subset23
+24	DNA	108	192	69	107	GTR+G	Subset24
+25	DNA	118	311	31	266	GTR	Subset25
+26	DNA	108	334	18	309	GTR+I+G	Subset26
+27	DNA	110	218	89	112	GTR+G	Subset27
+28	DNA	118	313	53	247	GTR+G	Subset28
+29	DNA	113	351	142	181	GTR+I+G	Subset29
+30	DNA	119	324	27	277	GTR+I+G	Subset30
+31	DNA	118	431	26	396	GTR+I+G	Subset31
+32	DNA	119	446	77	334	GTR+G	Subset32
+33	DNA	100	133	14	114	GTR+I+G	Subset33
+34	DNA	121	631	20	589	GTR+I+G	Subset34
+35	DNA	98	152	75	65	GTR+G	Subset35
+36	DNA	116	216	70	123	GTR	Subset36
+37	DNA	106	225	15	202	GTR+I+G	Subset37
+38	DNA	118	306	22	264	GTR	Subset38
+39	DNA	118	436	117	293	GTR+G	Subset39
+40	DNA	117	509	27	468	GTR	Subset40
+41	DNA	115	333	30	286	GTR	Subset41
+42	DNA	121	638	49	555	GTR	Subset42
+43	DNA	112	335	15	306	GTR	Subset43
+44	DNA	113	202	48	141	GTR+G	Subset44
+45	DNA	121	631	62	551	GTR+I+G	Subset45
+46	DNA	119	321	24	286	GTR+I+G	Subset46
+47	DNA	117	283	12	265	GTR	Subset47
+48	DNA	113	337	92	225	GTR+I+G	Subset48
+49	DNA	106	116	14	92	GTR+I+G	Subset49
+50	DNA	117	305	27	266	GTR+I+G	Subset50
+51	DNA	72	69	22	36	GTR+G	Subset51
+52	DNA	114	326	41	260	GTR	Subset52
+53	DNA	117	356	48	283	GTR+G	Subset53
+54	DNA	107	262	19	238	GTR	Subset54
+55	DNA	121	439	9	425	GTR	Subset55
+56	DNA	121	588	52	522	GTR+I+G	Subset56
+57	DNA	119	368	128	219	GTR+G	Subset57
+58	DNA	121	962	122	802	GTR+G	Subset58
+59	DNA	121	890	65	791	GTR+I+G	Subset59
+60	DNA	116	461	25	425	GTR+I+G	Subset60
+61	DNA	115	326	33	281	GTR+I+G	Subset61
+62	DNA	101	257	26	222	GTR+I+G	Subset62
+63	DNA	121	614	224	347	GTR+G	Subset63
+64	DNA	120	245	34	201	GTR+G	Subset64
+65	DNA	119	601	188	370	GTR+G	Subset65
+66	DNA	121	470	2	467	GTR+I+G	Subset66
+67	DNA	120	328	13	302	GTR	Subset67
+68	DNA	117	203	22	172	GTR+I+G	Subset68
+69	DNA	112	311	24	279	GTR	Subset69
+70	DNA	59	58	8	46	GTR+I+G	Subset70
+71	DNA	92	175	58	106	GTR+I+G	Subset71
+72	DNA	101	209	68	121	GTR	Subset72
+73	DNA	119	396	138	222	GTR+I+G	Subset73
+74	DNA	121	690	37	644	GTR+I+G	Subset74
+75	DNA	116	297	99	172	GTR+G	Subset75
+76	DNA	119	364	29	321	GTR	Subset76
+77	DNA	117	156	62	84	GTR+G	Subset77
+78	DNA	116	588	62	501	GTR+G	Subset78
+79	DNA	118	197	93	86	GTR	Subset79
+80	DNA	119	361	96	221	GTR+G	Subset80
+81	DNA	105	269	17	249	GTR+I+G	Subset81
+82	DNA	106	160	55	91	GTR+G	Subset82
+83	DNA	110	252	31	209	GTR+I+G	Subset83
+84	DNA	115	423	31	378	GTR	Subset84
+85	DNA	86	155	59	80	GTR	Subset85
+86	DNA	112	325	78	212	GTR+I+G	Subset86
+87	DNA	105	174	26	136	GTR+I+G	Subset87
+88	DNA	119	367	180	163	GTR+G	Subset88
+89	DNA	99	335	40	286	GTR+G	Subset89
+90	DNA	95	215	22	181	GTR	Subset90
+91	DNA	116	235	89	126	GTR+G	Subset91
+92	DNA	112	195	5	187	GTR	Subset92
+93	DNA	107	208	9	194	GTR	Subset93
+94	DNA	96	100	10	84	GTR	Subset94
+95	DNA	79	100	12	85	GTR+I+G	Subset95
+96	DNA	70	97	30	65	GTR+I+G	Subset96
+97	DNA	113	223	124	76	GTR+G	Subset97
+98	DNA	98	228	26	173	GTR+G	Subset98
+99	DNA	98	398	33	344	GTR+G	Subset99
+100	DNA	111	401	175	201	GTR+G	Subset100
+101	DNA	117	143	51	72	GTR+I+G	Subset101
+102	DNA	112	204	22	178	GTR+I+G	Subset102
+103	DNA	105	183	92	79	GTR+G	Subset103
+104	DNA	96	221	19	194	GTR+I+G	Subset104
+105	DNA	112	215	62	144	GTR+I+G	Subset105
+106	DNA	100	109	8	97	GTR	Subset106
+107	DNA	114	241	30	204	GTR+I+G	Subset107
+108	DNA	106	267	14	240	GTR+I+G	Subset108
+109	DNA	85	134	38	88	GTR+I+G	Subset109
+110	DNA	105	199	31	157	GTR+I+G	Subset110
+111	DNA	111	322	28	281	GTR	Subset111
+112	DNA	101	250	23	220	GTR+I+G	Subset112
+113	DNA	111	222	77	133	GTR+I+G	Subset113
+114	DNA	80	127	50	66	GTR+G	Subset114
+115	DNA	74	118	33	74	GTR+G	Subset115
+116	DNA	121	245	69	151	GTR+G	Subset116
+117	DNA	104	152	60	78	GTR+G	Subset117
+118	DNA	119	355	174	154	GTR+G	Subset118
+119	DNA	95	162	10	148	GTR+I+G	Subset119
+120	DNA	86	170	50	108	GTR+I+G	Subset120
+121	DNA	55	53	17	34	GTR+G	Subset121
+122	DNA	76	58	16	41	GTR+I+G	Subset122
+123	DNA	103	170	19	141	GTR+I+G	Subset123
+124	DNA	87	115	13	95	GTR+I+G	Subset124
+125	DNA	69	46	12	31	GTR	Subset125
+126	DNA	101	88	32	40	GTR+G	Subset126
+127	DNA	105	117	2	115	GTR+I+G	Subset127
+128	DNA	90	51	28	20	GTR	Subset128
+Degree of missing data: 0.055
+Info: multi-threading strategy over partitions
+
+
+===> START BOOTSTRAP REPLICATE NUMBER 1
+
+Creating bootstrap alignment (seed: 609363)...
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.184 seconds
+
+NOTE: 194 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -155261.667
+Current log-likelihood at step 1: -144092.944
+Current log-likelihood at step 2: -143471.152
+Current log-likelihood at step 3: -143370.502
+Current log-likelihood at step 4: -143315.990
+Current log-likelihood at step 5: -143258.930
+Current log-likelihood at step 6: -143229.432
+Current log-likelihood at step 7: -143205.367
+Current log-likelihood at step 8: -143187.091
+Current log-likelihood at step 9: -143171.440
+Current log-likelihood at step 10: -143156.782
+Current log-likelihood at step 11: -143144.017
+Current log-likelihood at step 12: -143135.587
+Current log-likelihood at step 13: -143127.709
+Current log-likelihood at step 14: -143121.783
+Current log-likelihood at step 15: -143115.952
+Current log-likelihood at step 16: -143108.351
+Current log-likelihood at step 17: -143102.512
+Current log-likelihood at step 18: -143097.908
+Current log-likelihood at step 19: -143093.688
+Current log-likelihood at step 20: -143090.133
+Current log-likelihood at step 21: -143086.395
+Current log-likelihood at step 22: -143083.535
+Current log-likelihood at step 23: -143080.935
+Current log-likelihood at step 24: -143078.553
+Current log-likelihood at step 25: -143075.866
+Current log-likelihood at step 26: -143073.309
+Current log-likelihood at step 27: -143070.985
+Current log-likelihood at step 28: -143069.012
+Current log-likelihood at step 29: -143067.119
+Current log-likelihood at step 30: -143065.471
+Current log-likelihood at step 31: -143064.044
+Current log-likelihood at step 32: -143062.456
+Current log-likelihood at step 33: -143061.206
+Current log-likelihood at step 34: -143060.037
+Current log-likelihood at step 35: -143059.113
+Current log-likelihood at step 36: -143057.958
+Current log-likelihood at step 37: -143056.969
+Current log-likelihood at step 38: -143056.127
+Current log-likelihood at step 39: -143055.460
+Current log-likelihood at step 40: -143054.340
+Current log-likelihood at step 41: -143053.757
+Current log-likelihood at step 42: -143053.176
+Current log-likelihood at step 43: -143052.657
+Current log-likelihood at step 44: -143052.077
+Current log-likelihood at step 45: -143051.607
+Current log-likelihood at step 46: -143051.211
+Current log-likelihood at step 47: -143050.828
+Current log-likelihood at step 48: -143050.346
+Current log-likelihood at step 49: -143049.992
+Current log-likelihood at step 50: -143049.685
+Current log-likelihood at step 51: -143049.386
+Current log-likelihood at step 52: -143049.103
+Current log-likelihood at step 53: -143048.804
+Current log-likelihood at step 54: -143048.519
+Current log-likelihood at step 55: -143048.281
+Current log-likelihood at step 56: -143048.054
+Current log-likelihood at step 57: -143047.825
+Current log-likelihood at step 58: -143047.529
+Current log-likelihood at step 59: -143047.273
+Current log-likelihood at step 60: -143047.084
+Current log-likelihood at step 61: -143046.911
+Current log-likelihood at step 62: -143046.730
+Current log-likelihood at step 63: -143046.555
+Current log-likelihood at step 64: -143046.395
+Current log-likelihood at step 65: -143046.206
+Current log-likelihood at step 66: -143046.018
+Current log-likelihood at step 67: -143045.812
+Current log-likelihood at step 68: -143045.657
+Current log-likelihood at step 69: -143045.520
+Current log-likelihood at step 70: -143045.383
+Current log-likelihood at step 71: -143045.225
+Current log-likelihood at step 72: -143045.076
+Current log-likelihood at step 73: -143044.927
+Current log-likelihood at step 74: -143044.792
+Current log-likelihood at step 75: -143043.518
+Current log-likelihood at step 76: -143043.383
+Current log-likelihood at step 77: -143043.278
+Current log-likelihood at step 78: -143043.173
+Current log-likelihood at step 79: -143043.069
+Current log-likelihood at step 80: -143042.949
+Current log-likelihood at step 81: -143042.805
+Current log-likelihood at step 82: -143042.644
+Current log-likelihood at step 83: -143042.547
+Partition-specific rates:  0.857 0.511 1.379 0.196 0.275 1.218 0.439 0.258 0.145 0.145 1.425 0.341 0.068 1.405 0.385 0.036 1.752 0.150 0.704 1.166 0.417 1.895 0.407 3.527 0.232 0.464 1.759 0.527 2.174 0.620 0.329 0.782 6.378 0.186 3.328 1.087 1.416 0.305 0.929 0.168 0.267 0.229 0.175 1.177 0.302 0.425 0.145 1.765 7.098 1.015 7.105 0.462 0.801 0.197 0.145 0.371 1.408 0.429 0.291 0.160 0.588 0.514 1.848 0.482 1.080 0.045 0.156 0.907 0.183 7.101 8.560 1.328 2.056 0.135 1.765 0.209 1.715 0.413 1.476 2.330 0.677 4.630 0.921 0.217 1.891 2.171 1.339 2.197 0.265 0.372 1.455 0.077 0.083 0.296 7.101 6.662 3.134 0.929 0.441 2.318 4.800 0.825 1.657 0.990 2.124 0.189 0.705 3.340 2.752 0.991 0.304 0.411 2.873 1.515 2.535 1.164 2.869 1.958 2.271 3.907 9.455 0.914 0.515 1.090 0.886 5.982 0.108 2.328
+Parameters optimization took 82 rounds (112.589 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Computing ML distances based on estimated model parameters... 12.724 sec
+Computing BIONJ tree...
+0.109 seconds
+Log-likelihood of BIONJ tree: -144914.324
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 31.689 second
+Computing log-likelihood of 98 initial trees ... 94.098 seconds
+Current best score: -142954.961
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -142876.329
+Current log-likelihood at step 1: -142861.961
+Current log-likelihood at step 2: -142860.705
+Current log-likelihood at step 3: -142860.370
+Current log-likelihood at step 4: -142860.016
+Current log-likelihood at step 5: -142859.864
+Current log-likelihood at step 6: -142859.688
+Current log-likelihood at step 7: -142859.585
+Current log-likelihood at step 8: -142859.411
+Current log-likelihood at step 9: -142859.296
+Current log-likelihood at step 10: -142859.181
+Current log-likelihood at step 11: -142859.083
+Parameters optimization took 10 rounds (9.495 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -142859.083
+Iteration 10 / LogL: -142969.268 / Time: 0h:4m:45s
+Iteration 20 / LogL: -142924.833 / Time: 0h:5m:17s
+Finish initializing candidate tree set (20)
+Current best tree score: -142859.083 / CPU time: 196.088
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -142847.331
+Current log-likelihood at step 1: -142841.981
+Current log-likelihood at step 2: -142841.564
+Current log-likelihood at step 3: -142841.378
+Current log-likelihood at step 4: -142841.149
+Current log-likelihood at step 5: -142840.987
+Current log-likelihood at step 6: -142840.878
+Current log-likelihood at step 7: -142840.366
+Current log-likelihood at step 8: -142840.276
+Parameters optimization took 7 rounds (6.467 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 22: -142840.276
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -142830.794
+Current log-likelihood at step 1: -142829.747
+Current log-likelihood at step 2: -142829.632
+Current log-likelihood at step 3: -142829.558
+Parameters optimization took 2 rounds (3.036 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 29: -142829.558
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -142817.635
+Current log-likelihood at step 1: -142812.206
+Current log-likelihood at step 2: -142811.879
+Current log-likelihood at step 3: -142811.738
+Current log-likelihood at step 4: -142811.650
+Parameters optimization took 3 rounds (4.838 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 30: -142811.650
+Iteration 30 / LogL: -142811.650 / Time: 0h:6m:35s (0h:22m:38s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -142809.364
+Current log-likelihood at step 1: -142808.858
+Current log-likelihood at step 2: -142808.763
+Parameters optimization took 1 rounds (1.837 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 31: -142808.763
+Iteration 40 / LogL: -142831.259 / Time: 0h:7m:39s (0h:17m:48s left)
+Iteration 50 / LogL: -142834.594 / Time: 0h:8m:37s (0h:14m:13s left)
+Iteration 60 / LogL: -142819.633 / Time: 0h:9m:38s (0h:11m:34s left)
+Iteration 70 / LogL: -142814.159 / Time: 0h:10m:31s (0h:9m:17s left)
+Iteration 80 / LogL: -142812.137 / Time: 0h:11m:28s (0h:7m:23s left)
+Iteration 90 / LogL: -142812.759 / Time: 0h:12m:32s (0h:5m:46s left)
+Iteration 100 / LogL: -142815.317 / Time: 0h:13m:24s (0h:4m:11s left)
+Iteration 110 / LogL: -142810.657 / Time: 0h:14m:21s (0h:2m:45s left)
+Iteration 120 / LogL: -142816.751 / Time: 0h:15m:16s (0h:1m:24s left)
+Iteration 130 / LogL: -142809.703 / Time: 0h:16m:16s (0h:0m:7s left)
+TREE SEARCH COMPLETED AFTER 132 ITERATIONS / Time: 0h:16m:27s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -142808.762
+Current log-likelihood at step 1: -142808.693
+Current log-likelihood at step 2: -142808.624
+Current log-likelihood at step 3: -142808.568
+Current log-likelihood at step 4: -142808.503
+Current log-likelihood at step 5: -142808.452
+Current log-likelihood at step 6: -142808.399
+Current log-likelihood at step 7: -142808.358
+Current log-likelihood at step 8: -142808.323
+Current log-likelihood at step 9: -142808.286
+Current log-likelihood at step 10: -142808.256
+Current log-likelihood at step 11: -142808.225
+Current log-likelihood at step 12: -142808.192
+Current log-likelihood at step 13: -142808.165
+Current log-likelihood at step 14: -142808.141
+Current log-likelihood at step 15: -142808.119
+Current log-likelihood at step 16: -142808.098
+Current log-likelihood at step 17: -142808.076
+Current log-likelihood at step 18: -142808.055
+Current log-likelihood at step 19: -142808.023
+Current log-likelihood at step 20: -142808.004
+Current log-likelihood at step 21: -142807.986
+Current log-likelihood at step 22: -142807.969
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+Current log-likelihood at step 23: -142807.952
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+Current log-likelihood at step 24: -142807.935
+Current log-likelihood at step 25: -142807.919
+Current log-likelihood at step 26: -142807.901
+Current log-likelihood at step 27: -142807.885
+Current log-likelihood at step 28: -142807.870
+Current log-likelihood at step 29: -142807.854
+Current log-likelihood at step 30: -142807.838
+Current log-likelihood at step 31: -142807.822
+Current log-likelihood at step 32: -142807.807
+Current log-likelihood at step 33: -142807.792
+Current log-likelihood at step 34: -142807.778
+Current log-likelihood at step 35: -142807.764
+Current log-likelihood at step 36: -142807.750
+Current log-likelihood at step 37: -142807.736
+Current log-likelihood at step 38: -142807.722
+Current log-likelihood at step 39: -142807.708
+Current log-likelihood at step 40: -142807.695
+Current log-likelihood at step 41: -142807.682
+Current log-likelihood at step 42: -142807.669
+Current log-likelihood at step 43: -142807.655
+Current log-likelihood at step 44: -142807.639
+Current log-likelihood at step 45: -142807.626
+Current log-likelihood at step 46: -142807.613
+Current log-likelihood at step 47: -142807.600
+Current log-likelihood at step 48: -142807.588
+Current log-likelihood at step 49: -142807.575
+Current log-likelihood at step 50: -142807.562
+Current log-likelihood at step 51: -142807.550
+Current log-likelihood at step 52: -142807.537
+Current log-likelihood at step 53: -142807.525
+Current log-likelihood at step 54: -142807.510
+Current log-likelihood at step 55: -142807.498
+Current log-likelihood at step 56: -142807.485
+Current log-likelihood at step 57: -142807.473
+Current log-likelihood at step 58: -142807.461
+Current log-likelihood at step 59: -142807.449
+Current log-likelihood at step 60: -142807.437
+Current log-likelihood at step 61: -142807.401
+Current log-likelihood at step 62: -142807.387
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+Current log-likelihood at step 63: -142807.376
+Current log-likelihood at step 64: -142807.364
+Current log-likelihood at step 65: -142807.352
+Current log-likelihood at step 66: -142807.340
+Current log-likelihood at step 67: -142807.327
+Current log-likelihood at step 68: -142807.315
+Current log-likelihood at step 69: -142807.303
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+Current log-likelihood at step 70: -142807.291
+Current log-likelihood at step 71: -142807.279
+Current log-likelihood at step 72: -142807.267
+Current log-likelihood at step 73: -142807.255
+Current log-likelihood at step 74: -142807.243
+Current log-likelihood at step 75: -142807.231
+Current log-likelihood at step 76: -142807.218
+Current log-likelihood at step 77: -142807.206
+Current log-likelihood at step 78: -142807.194
+Current log-likelihood at step 79: -142807.181
+Current log-likelihood at step 80: -142807.166
+Current log-likelihood at step 81: -142807.153
+Current log-likelihood at step 82: -142807.141
+Current log-likelihood at step 83: -142807.128
+Current log-likelihood at step 84: -142807.116
+Current log-likelihood at step 85: -142807.104
+Current log-likelihood at step 86: -142807.091
+Current log-likelihood at step 87: -142807.078
+Current log-likelihood at step 88: -142807.066
+Current log-likelihood at step 89: -142807.053
+Current log-likelihood at step 90: -142807.039
+Current log-likelihood at step 91: -142807.012
+Current log-likelihood at step 92: -142806.997
+Current log-likelihood at step 93: -142806.983
+Current log-likelihood at step 94: -142806.970
+Current log-likelihood at step 95: -142806.956
+Current log-likelihood at step 96: -142806.942
+Current log-likelihood at step 97: -142806.928
+Current log-likelihood at step 98: -142806.914
+Current log-likelihood at step 99: -142806.900
+Partition-specific rates:  0.847 0.512 1.384 0.196 0.289 1.215 0.440 0.257 0.145 0.145 1.479 0.342 0.068 1.330 0.431 0.036 1.745 0.151 0.795 1.155 0.419 1.797 0.408 3.703 0.233 0.463 1.787 0.527 2.108 0.628 0.310 0.780 5.999 0.186 3.096 1.072 1.415 0.306 0.945 0.168 0.268 0.230 0.175 1.138 0.301 0.434 0.145 1.854 7.110 0.909 7.117 0.463 0.764 0.196 0.145 0.379 1.402 0.439 0.291 0.160 0.566 0.534 1.891 0.484 1.071 0.045 0.156 0.979 0.183 7.119 9.069 1.335 1.906 0.135 1.793 0.209 1.688 0.424 1.448 2.337 0.664 4.645 1.276 0.217 1.869 2.156 1.309 2.058 0.266 0.370 1.479 0.077 0.083 0.296 7.375 7.045 3.105 0.861 0.453 2.324 4.851 0.826 1.671 1.036 2.248 0.189 0.703 3.603 2.598 1.110 0.304 0.391 2.690 1.508 2.529 1.162 2.818 1.956 2.183 3.385 9.472 0.869 0.512 1.083 0.881 5.778 0.108 2.220
+Parameters optimization took 99 rounds (74.192 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BEST SCORE FOUND : -142806.900
+Total tree length: 0.645
+
+Total number of iterations: 132
+CPU time used for tree search: 3264.085 sec (0h:54m:24s)
+Wall-clock time used for tree search: 865.748 sec (0h:14m:25s)
+Total CPU time used: 4030.059 sec (1h:7m:10s)
+Total wall-clock time used: 1062.163 sec (0h:17m:42s)
+
+===> START BOOTSTRAP REPLICATE NUMBER 2
+
+Creating bootstrap alignment (seed: 609364)...
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.291 seconds
+
+NOTE: 193 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -157210.214
+Current log-likelihood at step 1: -145722.155
+Current log-likelihood at step 2: -145192.048
+Current log-likelihood at step 3: -145094.679
+Current log-likelihood at step 4: -145044.087
+Current log-likelihood at step 5: -145013.132
+Current log-likelihood at step 6: -144988.449
+Current log-likelihood at step 7: -144970.062
+Current log-likelihood at step 8: -144953.495
+Current log-likelihood at step 9: -144939.326
+Current log-likelihood at step 10: -144927.591
+Current log-likelihood at step 11: -144917.921
+Current log-likelihood at step 12: -144909.562
+Current log-likelihood at step 13: -144902.140
+Current log-likelihood at step 14: -144895.612
+Current log-likelihood at step 15: -144890.129
+Current log-likelihood at step 16: -144885.440
+Current log-likelihood at step 17: -144881.227
+Current log-likelihood at step 18: -144877.379
+Current log-likelihood at step 19: -144873.987
+Current log-likelihood at step 20: -144870.566
+Current log-likelihood at step 21: -144867.679
+Current log-likelihood at step 22: -144864.787
+Current log-likelihood at step 23: -144862.471
+Current log-likelihood at step 24: -144860.017
+Current log-likelihood at step 25: -144857.916
+Current log-likelihood at step 26: -144855.816
+Current log-likelihood at step 27: -144853.257
+Current log-likelihood at step 28: -144851.286
+Current log-likelihood at step 29: -144849.401
+Current log-likelihood at step 30: -144847.652
+Current log-likelihood at step 31: -144846.285
+Current log-likelihood at step 32: -144844.757
+Current log-likelihood at step 33: -144843.553
+Current log-likelihood at step 34: -144842.190
+Current log-likelihood at step 35: -144841.044
+Current log-likelihood at step 36: -144839.302
+Current log-likelihood at step 37: -144838.100
+Current log-likelihood at step 38: -144836.994
+Current log-likelihood at step 39: -144835.733
+Current log-likelihood at step 40: -144834.639
+Current log-likelihood at step 41: -144833.841
+Current log-likelihood at step 42: -144832.688
+Current log-likelihood at step 43: -144831.979
+Current log-likelihood at step 44: -144831.045
+Current log-likelihood at step 45: -144830.344
+Current log-likelihood at step 46: -144829.532
+Current log-likelihood at step 47: -144828.899
+Current log-likelihood at step 48: -144828.071
+Current log-likelihood at step 49: -144827.537
+Current log-likelihood at step 50: -144826.932
+Current log-likelihood at step 51: -144826.119
+Current log-likelihood at step 52: -144825.466
+Current log-likelihood at step 53: -144824.982
+Current log-likelihood at step 54: -144824.463
+Current log-likelihood at step 55: -144823.922
+Current log-likelihood at step 56: -144823.027
+Current log-likelihood at step 57: -144821.984
+Current log-likelihood at step 58: -144821.081
+Current log-likelihood at step 59: -144820.435
+Current log-likelihood at step 60: -144820.122
+Current log-likelihood at step 61: -144819.626
+Current log-likelihood at step 62: -144818.491
+Current log-likelihood at step 63: -144818.084
+Current log-likelihood at step 64: -144817.778
+Current log-likelihood at step 65: -144817.491
+Current log-likelihood at step 66: -144816.977
+Current log-likelihood at step 67: -144816.358
+Current log-likelihood at step 68: -144816.063
+Current log-likelihood at step 69: -144815.822
+Current log-likelihood at step 70: -144815.570
+Current log-likelihood at step 71: -144815.345
+Current log-likelihood at step 72: -144815.119
+Current log-likelihood at step 73: -144814.898
+Current log-likelihood at step 74: -144814.676
+Current log-likelihood at step 75: -144814.448
+Current log-likelihood at step 76: -144814.219
+Current log-likelihood at step 77: -144814.015
+Current log-likelihood at step 78: -144813.818
+Current log-likelihood at step 79: -144813.635
+Current log-likelihood at step 80: -144813.430
+Current log-likelihood at step 81: -144813.208
+Current log-likelihood at step 82: -144813.065
+Current log-likelihood at step 83: -144812.879
+Current log-likelihood at step 84: -144812.740
+Current log-likelihood at step 85: -144812.561
+Current log-likelihood at step 86: -144812.333
+Current log-likelihood at step 87: -144811.988
+Current log-likelihood at step 88: -144811.857
+Current log-likelihood at step 89: -144811.698
+Current log-likelihood at step 90: -144811.570
+Current log-likelihood at step 91: -144811.422
+Current log-likelihood at step 92: -144811.221
+Current log-likelihood at step 93: -144811.078
+Current log-likelihood at step 94: -144810.886
+Current log-likelihood at step 95: -144810.751
+Current log-likelihood at step 96: -144810.610
+Current log-likelihood at step 97: -144810.486
+Current log-likelihood at step 98: -144810.328
+Current log-likelihood at step 99: -144810.193
+Partition-specific rates:  0.688 0.444 1.379 0.196 0.292 1.347 0.420 0.107 0.149 0.149 1.410 0.422 0.085 1.362 0.420 0.046 1.736 0.178 0.382 1.271 0.362 1.571 0.315 3.154 0.248 0.304 2.909 0.533 2.606 0.627 0.402 0.754 6.931 0.174 2.099 0.985 0.300 0.303 1.166 0.149 0.224 0.240 0.149 0.877 0.450 0.291 0.149 1.291 7.090 1.237 7.090 0.419 0.830 0.229 0.149 0.440 1.420 0.480 0.483 0.186 0.655 0.589 1.233 0.375 1.143 0.009 0.149 0.906 0.196 6.200 7.090 1.634 2.885 0.214 1.518 0.256 1.410 0.490 1.620 2.598 1.795 2.457 0.725 0.197 1.762 1.771 3.945 2.269 0.432 0.458 1.976 0.103 0.090 0.453 7.090 6.879 2.634 0.920 0.589 2.642 2.580 0.653 1.715 0.690 2.974 0.175 1.267 0.980 1.727 1.524 0.251 0.553 2.307 1.963 2.338 1.318 2.844 1.874 2.890 6.570 7.090 1.278 1.034 3.585 0.664 4.115 0.067 1.861
+Parameters optimization took 99 rounds (131.296 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Computing ML distances based on estimated model parameters... 8.938 sec
+Computing BIONJ tree...
+0.089 seconds
+Log-likelihood of BIONJ tree: -146561.312
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 33.562 second
+Computing log-likelihood of 98 initial trees ... 102.748 seconds
+Current best score: -144806.673
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144737.645
+Current log-likelihood at step 1: -144726.177
+Current log-likelihood at step 2: -144724.303
+Current log-likelihood at step 3: -144723.847
+Current log-likelihood at step 4: -144723.196
+Current log-likelihood at step 5: -144722.886
+Current log-likelihood at step 6: -144722.530
+Current log-likelihood at step 7: -144722.264
+Current log-likelihood at step 8: -144722.062
+Current log-likelihood at step 9: -144721.832
+Current log-likelihood at step 10: -144721.691
+Current log-likelihood at step 11: -144721.449
+Current log-likelihood at step 12: -144721.324
+Current log-likelihood at step 13: -144721.143
+Current log-likelihood at step 14: -144721.046
+Parameters optimization took 13 rounds (17.260 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -144721.046
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144718.539
+Current log-likelihood at step 1: -144710.085
+Current log-likelihood at step 2: -144708.235
+Current log-likelihood at step 3: -144707.812
+Current log-likelihood at step 4: -144707.602
+Current log-likelihood at step 5: -144707.273
+Current log-likelihood at step 6: -144707.129
+Current log-likelihood at step 7: -144706.943
+Current log-likelihood at step 8: -144706.842
+Current log-likelihood at step 9: -144706.686
+Current log-likelihood at step 10: -144706.584
+Current log-likelihood at step 11: -144706.495
+Parameters optimization took 10 rounds (11.504 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 2: -144706.495
+Iteration 10 / LogL: -144742.820 / Time: 0h:5m:38s
+Iteration 20 / LogL: -144811.687 / Time: 0h:6m:15s
+Finish initializing candidate tree set (20)
+Current best tree score: -144706.495 / CPU time: 233.552
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144704.169
+Current log-likelihood at step 1: -144696.943
+Current log-likelihood at step 2: -144696.435
+Current log-likelihood at step 3: -144696.266
+Current log-likelihood at step 4: -144696.141
+Current log-likelihood at step 5: -144696.058
+Parameters optimization took 4 rounds (5.429 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 21: -144696.058
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144688.925
+Current log-likelihood at step 1: -144685.141
+Current log-likelihood at step 2: -144684.414
+Current log-likelihood at step 3: -144684.310
+Current log-likelihood at step 4: -144684.253
+Parameters optimization took 3 rounds (4.930 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 23: -144684.253
+Iteration 30 / LogL: -146501.575 / Time: 0h:7m:19s (0h:23m:21s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144680.937
+Current log-likelihood at step 1: -144676.371
+Current log-likelihood at step 2: -144675.851
+Current log-likelihood at step 3: -144675.713
+Current log-likelihood at step 4: -144675.629
+Parameters optimization took 3 rounds (3.837 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 35: -144675.629
+Iteration 40 / LogL: -144678.114 / Time: 0h:8m:24s (0h:20m:23s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144671.391
+Current log-likelihood at step 1: -144669.360
+Current log-likelihood at step 2: -144669.192
+Current log-likelihood at step 3: -144669.089
+Current log-likelihood at step 4: -144669.027
+Parameters optimization took 3 rounds (3.140 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 42: -144669.027
+Iteration 50 / LogL: -144675.952 / Time: 0h:9m:22s (0h:17m:32s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144668.512
+Current log-likelihood at step 1: -144667.031
+Current log-likelihood at step 2: -144666.940
+Parameters optimization took 1 rounds (1.669 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 53: -144666.940
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144665.841
+Current log-likelihood at step 1: -144665.117
+Current log-likelihood at step 2: -144665.024
+Parameters optimization took 1 rounds (1.560 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 56: -144665.024
+Iteration 60 / LogL: -144684.652 / Time: 0h:10m:24s (0h:16m:52s left)
+Iteration 70 / LogL: -144671.639 / Time: 0h:11m:20s (0h:14m:5s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144661.660
+Current log-likelihood at step 1: -144660.861
+Current log-likelihood at step 2: -144660.772
+Parameters optimization took 1 rounds (1.998 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 73: -144660.772
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144660.233
+Current log-likelihood at step 1: -144658.718
+Current log-likelihood at step 2: -144658.537
+Current log-likelihood at step 3: -144658.490
+Parameters optimization took 2 rounds (2.585 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 79: -144658.490
+Iteration 80 / LogL: -144671.597 / Time: 0h:12m:25s (0h:15m:31s left)
+Iteration 90 / LogL: -144666.743 / Time: 0h:13m:25s (0h:13m:23s left)
+Iteration 100 / LogL: -144666.190 / Time: 0h:14m:25s (0h:11m:28s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144657.982
+Current log-likelihood at step 1: -144656.658
+Current log-likelihood at step 2: -144656.532
+Current log-likelihood at step 3: -144656.483
+Parameters optimization took 2 rounds (2.580 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 106: -144656.483
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144652.488
+Current log-likelihood at step 1: -144651.945
+Current log-likelihood at step 2: -144651.879
+Parameters optimization took 1 rounds (1.589 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 110: -144651.879
+Iteration 110 / LogL: -144651.879 / Time: 0h:15m:29s (0h:14m:10s left)
+Iteration 120 / LogL: -144676.143 / Time: 0h:16m:31s (0h:12m:28s left)
+Iteration 130 / LogL: -144666.627 / Time: 0h:17m:24s (0h:10m:46s left)
+Iteration 140 / LogL: -144679.988 / Time: 0h:18m:20s (0h:9m:13s left)
+Iteration 150 / LogL: -144681.671 / Time: 0h:19m:19s (0h:7m:45s left)
+Iteration 160 / LogL: -144693.735 / Time: 0h:20m:14s (0h:6m:21s left)
+Iteration 170 / LogL: -144669.741 / Time: 0h:21m:3s (0h:4m:58s left)
+Iteration 180 / LogL: -144721.647 / Time: 0h:21m:56s (0h:3m:40s left)
+Iteration 190 / LogL: -144698.549 / Time: 0h:22m:45s (0h:2m:24s left)
+Iteration 200 / LogL: -144694.587 / Time: 0h:23m:35s (0h:1m:11s left)
+UPDATE BEST LOG-LIKELIHOOD: -144651.879
+Iteration 210 / LogL: -144742.922 / Time: 0h:24m:25s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 211 ITERATIONS / Time: 0h:24m:30s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -144651.877
+Current log-likelihood at step 1: -144651.852
+Current log-likelihood at step 2: -144651.826
+Current log-likelihood at step 3: -144651.800
+Current log-likelihood at step 4: -144651.781
+Current log-likelihood at step 5: -144651.763
+Current log-likelihood at step 6: -144651.741
+Current log-likelihood at step 7: -144651.725
+Current log-likelihood at step 8: -144651.711
+Current log-likelihood at step 9: -144651.693
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+Current log-likelihood at step 10: -144651.672
+Current log-likelihood at step 11: -144651.659
+Current log-likelihood at step 12: -144651.648
+Current log-likelihood at step 13: -144651.611
+Current log-likelihood at step 14: -144651.582
+Current log-likelihood at step 15: -144651.563
+Current log-likelihood at step 16: -144651.554
+Partition-specific rates:  0.652 0.442 1.377 0.195 0.298 1.339 0.432 0.109 0.143 0.143 1.400 0.420 0.084 1.356 0.420 0.045 1.789 0.177 0.398 1.261 0.361 1.575 0.316 3.211 0.247 0.302 2.644 0.530 2.520 0.629 0.412 0.750 7.076 0.173 2.242 0.980 0.297 0.302 1.170 0.143 0.223 0.239 0.143 0.892 0.428 0.278 0.143 1.263 7.080 1.240 7.075 0.417 0.826 0.228 0.143 0.423 1.400 0.479 0.513 0.185 0.721 0.581 1.226 0.362 1.113 0.009 0.143 0.950 0.195 6.609 7.130 1.618 2.529 0.219 1.492 0.255 1.382 0.489 1.613 2.539 2.061 2.420 0.663 0.196 1.752 1.896 4.795 2.245 0.430 0.456 2.051 0.103 0.090 0.451 7.127 6.853 2.570 0.916 0.573 2.596 2.582 0.647 1.702 0.650 3.161 0.174 1.363 1.024 1.858 1.426 0.250 0.552 2.265 1.956 2.270 1.387 2.842 1.894 2.908 6.002 7.075 1.270 1.031 4.016 0.660 4.220 0.066 1.804
+Parameters optimization took 15 rounds (10.320 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BEST SCORE FOUND : -144651.554
+Total tree length: 0.650
+
+Total number of iterations: 211
+CPU time used for tree search: 5078.536 sec (1h:24m:38s)
+Wall-clock time used for tree search: 1328.620 sec (0h:22m:8s)
+Total CPU time used: 5664.222 sec (1h:34m:24s)
+Total wall-clock time used: 1480.768 sec (0h:24m:40s)
+
+===> START BOOTSTRAP REPLICATE NUMBER 3
+
+Creating bootstrap alignment (seed: 609365)...
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.219 seconds
+
+NOTE: 194 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -157202.850
+Current log-likelihood at step 1: -146022.012
+Current log-likelihood at step 2: -145301.867
+Current log-likelihood at step 3: -145173.202
+Current log-likelihood at step 4: -145102.949
+Current log-likelihood at step 5: -145060.497
+Current log-likelihood at step 6: -145031.466
+Current log-likelihood at step 7: -145006.465
+Current log-likelihood at step 8: -144985.671
+Current log-likelihood at step 9: -144968.564
+Current log-likelihood at step 10: -144953.538
+Current log-likelihood at step 11: -144942.822
+Current log-likelihood at step 12: -144931.920
+Current log-likelihood at step 13: -144922.913
+Current log-likelihood at step 14: -144913.851
+Current log-likelihood at step 15: -144907.105
+Current log-likelihood at step 16: -144899.726
+Current log-likelihood at step 17: -144894.285
+Current log-likelihood at step 18: -144887.823
+Current log-likelihood at step 19: -144883.347
+Current log-likelihood at step 20: -144878.156
+Current log-likelihood at step 21: -144874.193
+Current log-likelihood at step 22: -144870.105
+Current log-likelihood at step 23: -144866.766
+Current log-likelihood at step 24: -144863.120
+Current log-likelihood at step 25: -144860.097
+Current log-likelihood at step 26: -144857.058
+Current log-likelihood at step 27: -144854.759
+Current log-likelihood at step 28: -144852.011
+Current log-likelihood at step 29: -144849.947
+Current log-likelihood at step 30: -144847.601
+Current log-likelihood at step 31: -144845.716
+Current log-likelihood at step 32: -144843.754
+Current log-likelihood at step 33: -144842.162
+Current log-likelihood at step 34: -144840.464
+Current log-likelihood at step 35: -144838.976
+Current log-likelihood at step 36: -144837.555
+Current log-likelihood at step 37: -144836.287
+Current log-likelihood at step 38: -144835.006
+Current log-likelihood at step 39: -144833.940
+Current log-likelihood at step 40: -144832.736
+Current log-likelihood at step 41: -144831.832
+Current log-likelihood at step 42: -144830.772
+Current log-likelihood at step 43: -144830.036
+Current log-likelihood at step 44: -144829.202
+Current log-likelihood at step 45: -144827.874
+Current log-likelihood at step 46: -144827.146
+Current log-likelihood at step 47: -144826.447
+Current log-likelihood at step 48: -144825.738
+Current log-likelihood at step 49: -144825.079
+Current log-likelihood at step 50: -144823.996
+Current log-likelihood at step 51: -144823.343
+Current log-likelihood at step 52: -144822.760
+Current log-likelihood at step 53: -144822.190
+Current log-likelihood at step 54: -144821.699
+Current log-likelihood at step 55: -144821.173
+Current log-likelihood at step 56: -144820.713
+Current log-likelihood at step 57: -144820.234
+Current log-likelihood at step 58: -144819.829
+Current log-likelihood at step 59: -144819.359
+Current log-likelihood at step 60: -144819.017
+Current log-likelihood at step 61: -144818.579
+Current log-likelihood at step 62: -144818.289
+Current log-likelihood at step 63: -144817.861
+Current log-likelihood at step 64: -144817.556
+Current log-likelihood at step 65: -144817.229
+Current log-likelihood at step 66: -144816.890
+Current log-likelihood at step 67: -144816.576
+Current log-likelihood at step 68: -144816.268
+Current log-likelihood at step 69: -144815.882
+Current log-likelihood at step 70: -144815.430
+Current log-likelihood at step 71: -144814.932
+Current log-likelihood at step 72: -144814.721
+Current log-likelihood at step 73: -144814.425
+Current log-likelihood at step 74: -144814.289
+Current log-likelihood at step 75: -144813.884
+Current log-likelihood at step 76: -144813.753
+Current log-likelihood at step 77: -144813.450
+Current log-likelihood at step 78: -144813.315
+Current log-likelihood at step 79: -144813.010
+Current log-likelihood at step 80: -144812.896
+Current log-likelihood at step 81: -144812.632
+Current log-likelihood at step 82: -144812.532
+Current log-likelihood at step 83: -144812.285
+Current log-likelihood at step 84: -144812.145
+Current log-likelihood at step 85: -144811.975
+Current log-likelihood at step 86: -144811.848
+Current log-likelihood at step 87: -144811.628
+Current log-likelihood at step 88: -144811.503
+Current log-likelihood at step 89: -144811.449
+Partition-specific rates:  0.816 0.448 1.298 0.259 0.245 1.389 0.456 0.217 0.139 0.139 1.447 0.321 0.124 1.267 0.282 0.119 1.363 0.139 0.318 1.239 0.426 1.767 0.358 2.213 0.286 0.306 2.202 0.494 2.088 0.637 0.305 0.743 4.947 0.165 1.938 0.938 0.756 0.309 1.144 0.171 0.274 0.231 0.189 1.482 0.351 0.539 0.139 1.541 6.993 1.404 6.993 0.415 0.868 0.263 0.139 0.336 1.202 0.419 0.431 0.248 0.508 0.513 1.477 0.379 1.260 0.000 0.139 0.493 0.245 6.993 6.995 1.412 1.879 0.194 1.873 0.212 1.667 0.457 1.430 2.401 1.191 3.451 0.909 0.192 1.779 1.468 2.211 1.822 0.339 0.417 1.212 0.119 0.119 0.304 6.994 6.729 4.276 0.978 0.506 2.216 3.984 0.727 1.698 0.896 2.842 0.201 4.494 4.548 1.632 1.166 0.253 0.699 1.830 2.255 2.803 1.142 1.918 1.575 2.414 4.801 6.993 1.375 0.763 6.592 0.917 6.993 0.123 1.689
+Parameters optimization took 88 rounds (102.396 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Computing ML distances based on estimated model parameters... 8.792 sec
+Computing BIONJ tree...
+0.087 seconds
+Log-likelihood of BIONJ tree: -146425.980
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 31.104 second
+Computing log-likelihood of 98 initial trees ... 91.321 seconds
+Current best score: -144643.543
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144549.097
+Current log-likelihood at step 1: -144535.534
+Current log-likelihood at step 2: -144534.108
+Current log-likelihood at step 3: -144533.480
+Current log-likelihood at step 4: -144533.081
+Current log-likelihood at step 5: -144532.751
+Current log-likelihood at step 6: -144532.381
+Current log-likelihood at step 7: -144531.928
+Current log-likelihood at step 8: -144531.755
+Current log-likelihood at step 9: -144531.615
+Current log-likelihood at step 10: -144531.515
+Parameters optimization took 9 rounds (8.246 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -144531.515
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144518.735
+Current log-likelihood at step 1: -144513.620
+Current log-likelihood at step 2: -144513.124
+Current log-likelihood at step 3: -144512.869
+Current log-likelihood at step 4: -144512.632
+Current log-likelihood at step 5: -144512.499
+Current log-likelihood at step 6: -144512.392
+Current log-likelihood at step 7: -144512.053
+Current log-likelihood at step 8: -144511.952
+Current log-likelihood at step 9: -144511.884
+Parameters optimization took 8 rounds (6.458 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 5: -144511.884
+Iteration 10 / LogL: -144546.702 / Time: 0h:4m:38s
+Iteration 20 / LogL: -144565.479 / Time: 0h:5m:5s
+Finish initializing candidate tree set (20)
+Current best tree score: -144511.884 / CPU time: 194.804
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -144526.591 / Time: 0h:5m:57s (0h:15m:20s left)
+Iteration 40 / LogL: -144534.662 / Time: 0h:6m:51s (0h:11m:23s left)
+Iteration 50 / LogL: -144521.393 / Time: 0h:7m:42s (0h:8m:37s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144505.924
+Current log-likelihood at step 1: -144505.339
+Current log-likelihood at step 2: -144505.226
+Current log-likelihood at step 3: -144505.149
+Parameters optimization took 2 rounds (2.219 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 56: -144505.149
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144499.662
+Current log-likelihood at step 1: -144496.098
+Current log-likelihood at step 2: -144495.583
+Current log-likelihood at step 3: -144495.318
+WARNING: ABNORMAL_TERMINATION_IN_LNSRCH
+Current log-likelihood at step 4: -144495.131
+Current log-likelihood at step 5: -144494.952
+Current log-likelihood at step 6: -144494.873
+Parameters optimization took 5 rounds (4.978 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 59: -144494.873
+Iteration 60 / LogL: -144503.214 / Time: 0h:8m:50s (0h:14m:46s left)
+Iteration 70 / LogL: -144510.759 / Time: 0h:9m:45s (0h:12m:32s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144491.168
+Current log-likelihood at step 1: -144490.523
+Current log-likelihood at step 2: -144490.418
+Current log-likelihood at step 3: -144490.284
+Current log-likelihood at step 4: -144490.228
+Parameters optimization took 3 rounds (5.457 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 80: -144490.228
+Iteration 80 / LogL: -144490.228 / Time: 0h:10m:48s (0h:13m:38s left)
+Iteration 90 / LogL: -144506.972 / Time: 0h:11m:44s (0h:11m:50s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -144484.397
+Current log-likelihood at step 1: -144484.088
+Current log-likelihood at step 2: -144483.862
+Current log-likelihood at step 3: -144483.790
+Parameters optimization took 2 rounds (2.134 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 99: -144483.790
+Iteration 100 / LogL: -144490.643 / Time: 0h:12m:43s (0h:12m:41s left)
+Iteration 110 / LogL: -144496.924 / Time: 0h:13m:47s (0h:11m:14s left)
