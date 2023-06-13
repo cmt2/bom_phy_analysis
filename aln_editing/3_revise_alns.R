@@ -1,5 +1,5 @@
 # remove bad seqs from alignments
-setwd("~/Desktop/carrie")
+# setwd("my/dir")
 
 # dir for new alignments
 dir.create("loci_highcoverage_good")

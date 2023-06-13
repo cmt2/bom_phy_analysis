@@ -1,5 +1,5 @@
 # blast bad seqs and save info on top result
-setwd("~/Desktop/carrie")
+setwd("my/dir")
 
 bad_seqs <- read.table(file = "seqs_to_remove.txt",
                        sep = "\t")

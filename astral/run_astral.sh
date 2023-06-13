@@ -9,7 +9,7 @@ cat gt_realBS/gt_output/*.tre > in.trees
 nw_ed  in.trees 'i & b<=10' o > in_BS10.trees
 
 
-# run astral (on Carrie's computer)
+# run astral (on local computer)
 
 # just get best ASTRAL Tree 
 java -jar /Applications/Phylogeny_Programs/Astral/astral.5.7.7.jar -i in_BS10.trees -o output/Bomarea_BS10_2.tre 2> output/Bomarea_BS10_2.log

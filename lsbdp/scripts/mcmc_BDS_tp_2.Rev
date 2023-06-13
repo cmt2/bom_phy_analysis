@@ -5,7 +5,7 @@
 #
 #
 # authors: Sebastian Hoehna
-# modified by Carrie Tribble May 22, 2022
+# modified by author May 22, 2022
 ################################################################################
 
 loadPlugin("TensorPhylo")
